@@ -1,0 +1,5 @@
+services:
+  sales-forecast:
+    build: .
+    ports:
+      - "8501:8501"
