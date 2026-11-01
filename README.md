@@ -2,7 +2,9 @@
 
 Streamlit app that cleans daily product sales and forecasts revenue. It trains Prophet and XGBoost, compares them on a rolling-origin window, and opens on the model with the lower error.
 
-A human review of the training setup made that forecast 11% more precise on the bundled sample. The first version trained on the last 180 days only, with XGBoost fixed at 200 trees, depth 3, and a learning rate of 0.08. The revision trains on up to the last two years, and the settings in [Adaptive training settings](#adaptive-training-settings) follow how much history that window contains. On Widget, Gadget, and Doohickey, the model the app opens on still had the lower 14-day error. Pooling those three products, its RMSE fell from 4.61 to 4.12.
+A human review of the training setup made that forecast 11% more precise on the bundled sample. The first version trained on the last 180 days only, with XGBoost fixed at 200 trees, depth 3, and a learning rate of 0.08. The revision trains on up to the last two years, and the settings in Adaptive training settings follow how much history that window contains. On Widget, Gadget, and Doohickey, the model the app opens on still had the lower 14-day error. Pooling those three products, its RMSE fell from 4.61 to 4.12.
+
+I directed and validated the model choices with AI assistance; the improvements came from reviewing the training logic, data window, and error patterns myself.
 
 ## CSV schema
 
